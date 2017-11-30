@@ -2,11 +2,12 @@
 
 Welcome to the Resources Library of GeoAdaptive!
 
-<html>
+<!-- <html> -->
   <body>
     <head> The First GA Web Tutorial</head>
 
     <strong>Learning Objectives</strong>
+
       1). To learn how to use Github, the open collaboration platform for application development;
       2). To learn the basics of javascript, HTML, and CSS;
       3). To learn how to set up a simple web-mapping application using an open server;
@@ -27,4 +28,4 @@ Welcome to the Resources Library of GeoAdaptive!
     </form>
 
     </body>
-</html>
+<!-- </html> -->
