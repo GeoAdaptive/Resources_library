@@ -24,11 +24,11 @@ L.marker([-25.262, -57.581]).addTo(map)
     .addTo(map);
 
 ///3. Adding the layer data to be mapped
-var SouthAmerica = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json";
+var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK7cMaK3qDRhxjeQ47_XUpK3jfPppks5aKXmowA%3D%3D";
 
 //downloading and creating mappable objects
 $(document).ready(function(){
-  $.ajax(SouthAmerica).done(function(data){
+  $.ajax(Paraguay_Department).done(function(data){
     var parsedData = JSON.parse(data);
     var LayerMappedPolygon = L.geoJSON(parsedData,
       {
