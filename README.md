@@ -55,16 +55,30 @@ Then open your Atom interface
 
 #### Step 3
 Open the HTML, CSS files
+
+##### HTML:
+<br> Here looks at the file, these part of the code sets up a web page using HTML
+
 ```HTML
 <!DOCTYPE html>
 <html>
   <!--here is where your web page starts to load-->
   <body>
+  </body>
+</html>
+```
+Now within the <body> tags, you can start build it.
+First you would want to set up some preparations, such as the links calling to use the default style controllers
+
+```
     <!--here add some links to use the default styles-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <!-- This request the usage of the leaflet library, which is a populat web-mapping library for open-source projects
+```
+Then you can embed the link to request the use of leaflet, the open-source mapping library
+```
+<!-- This request the usage of the leaflet library, which is a populat web-mapping library for open-source projects
     Make sure you put this AFTER Leaflet's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
       integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
@@ -73,25 +87,36 @@ Open the HTML, CSS files
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
       integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
       crossorigin=""></script>
-    <!--And add this jquery documentation for downloading and parsing data-->
+```
+Also the jQuery document for downloading and cleaning your converted geojson file
+
+```
+<!--And add this jquery documentation for downloading and parsing data-->
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
-    <!--Below starts the content of the webpage-->
-    <!--The mapping portal here starts from the top edge of your screen, takes the full width 100%, the height 84%-->
+
+```
+Here the web content starts. First we set up the map by creating a HTML <div> element for the map. We design it as full screen wide (100%) and takes 84% of the height of the screen.
+```
+<!--The mapping portal here starts from the top edge of your screen, takes the full width 100%, the height 84%-->
     <div id="map" style="top:0; width:100%; height:84%; z-index:20;"></div>
     <!--We can add the title of your webmap here-->
+```
+Now use this second <div> to name your web application
+
+``` 
     <div>
       <h2 id = "title"> Change your title here</h2>
     </div>
     <!--usually put the request for javascript files here, it controls the operations of the application-->
-    <script src="js/js.js"></script>
-  </body>
-  <!--the application ends-->
-</html>
-
 ```
+Don't forget to call for the javascript file that controls the back-end operation of the web application
+```
+  <script src="js/js.js"></script>
+```
+<br>
 
 
 ### Step 4
