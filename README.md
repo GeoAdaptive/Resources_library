@@ -54,8 +54,6 @@ Convert your shapefile from shp to the geoJSON format. You should be able to do 
 
 #### Step 1
 First, fork this Resources_library repository to your own Github repo. Check to make sure you have the css, js, data, fonts folders and the index.html file. Let me know if you have problems.
-<img href = https://imgur.com/KX8rQNM>
-</img>
 
 #### Step 2
 Then open your Atom interface
