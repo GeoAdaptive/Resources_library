@@ -6,7 +6,7 @@
 ## Web mapping
 The links below are free online course websites offering tutorial courses and lessons, many of which have classes on webmapping too.
 1. <a href = https://www.codecademy.com/learn/learn-html>code academy </a>
-2. <a href = https://www.lynda.com/?utm_medium=direct&utm_source=linda.com&utm_campaign=url-redirect>linda.com </a>
+2. <a href = https://www.lynda.com>linda.com </a>
 3. <a href = https://www.edx.org/course> edx </a>
 
 ## Programming in general
