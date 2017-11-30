@@ -10,7 +10,7 @@ This is the First GA Web Tutorial.
 2) To learn the basics of javascript, HTML, and CSS;<br>
 3) To learn how to set up a simple web-mapping application using an open server;
 
-======================================================================================================.
+=======================================================================================.
 ### Github and preparations
 #### Step 1
 Register your Github account <a href = https://github.com/>here.</a>
