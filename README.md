@@ -59,7 +59,7 @@ First, fork this Resources_library repository to your own Github repo. Check to 
 Then open your Atom interface
 
 #### Step 3
-Open the HTML, CSS files
+Open the HTML(the index.html), CSS(the css file in the css folder) files
 
 ##### HTML:
 <br> Here looks at the file, these part of the code sets up a web page using HTML
@@ -137,7 +137,7 @@ Now, the HTML file is set up. Let's look at the CSS file.
 
 
 ### Step 4
-Now open the js.js
+Now open the js.js in the js folder
 ```Javascript
 ///This is a 3-STEP process
 /// 1. Setting up the Basemap
