@@ -6,14 +6,6 @@ var map = L.map('map', {
   zoom: 6.5
 });
 
-// var OpenStreetMap_BZH = L.tileLayer('http://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png', {
-// 	maxZoom: 19,
-// 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://www.openstreetmap.bzh/" target="_blank">Breton OpenStreetMap Team</a>',
-// 	bounds: [[46.2, -5.5], [50, 0.7]]
-// });
-//
-// OpenStreetMap_BZH.addTo(map);
-
 // other styles are also available to choose from
 // see here:
 // also here maybe: http://leaflet-extras.github.io/leaflet-providers/preview/
