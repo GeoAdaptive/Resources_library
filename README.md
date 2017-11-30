@@ -27,9 +27,9 @@ Now download the free-to-use coding interface Atom <a href = https://atom.io/>he
 extended reading
 <a href = http://people.apache.org/~acmurthy/WhyIsProgrammingFun.html>What's the fun of programming?</a>
 
-<br>
 ### Web Mapping Fundamentals
-Here is a list of online tutorial courses available to do
+<br>
+Here are some good resources of online tutorial courses good to start with.
 
 <ul>
 <li> HTML & CSS </li> 
@@ -41,8 +41,8 @@ This is one of the most popular tools to link back-end operations with front-end
 </ul>
 In total, these courses shouldn't take more than three full days to complete
 
-<br>
 ### Putting up a Web-map
+
 #### Social-economic Profile of Paraguay Departments
 This is a step-by-step walking through example for, starting with a GIS shapefile, to a simple online webmap-application
 The map application you are going to build looks like <a href = >this. </a> 
@@ -55,6 +55,14 @@ Then open your Atom interface
 
 #### Step 3
 Open the HTML, CSS files
+
+### Step 4
+Now open the index.html
+```Javascript
+// add basemap.
+L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+```
+
 
 #### Step 4
 
