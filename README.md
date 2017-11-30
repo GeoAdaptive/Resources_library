@@ -30,8 +30,8 @@ Here is a list of online tutorial courses available to do
 <li> HTML & CSS </li> 
 This is the framework for most of the websites nowadays, the front-end design language 
 <a href = https://www.codecademy.com/en/tracks/web> here </a>
-This is one of the most popular tools to link back-end operations with front-end reactions, the instrument of web-apps
 <li> javascript </li> <a href = https://www.codecademy.com/learn/introduction-to-javascript> here </a>
+This is one of the most popular tools to link back-end operations with front-end reactions, the instrument of web-apps
 </ul>
 In total, these courses shouldn't take more than three full days to complete
 
