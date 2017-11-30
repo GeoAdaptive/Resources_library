@@ -67,7 +67,7 @@ Open the HTML, CSS files
   </body>
 </html>
 ```
-Now within the \<body>\ tags, you can start build it.
+Now within the \\<body>\ tags, you can start build it.
 First you would want to set up some preparations, such as the links calling to use the default style controllers
 
 ```
