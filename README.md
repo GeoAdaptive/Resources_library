@@ -1,4 +1,4 @@
-# Readme
+# Web Mapping Essentials
 
 Welcome to the Resources Library of GeoAdaptive!
 
@@ -27,7 +27,7 @@ Now download the free-to-use coding interface Atom <a href = https://atom.io/>he
 extended reading
 <a href = http://people.apache.org/~acmurthy/WhyIsProgrammingFun.html>What's the fun of programming?</a>
 
-### Web Mapping Fundamentals
+### Online Courses
 <br>
 Here are some good resources of online tutorial courses good to start with. Shouldn't take more than a day to complete for each. 
 
