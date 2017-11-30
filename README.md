@@ -1,4 +1,4 @@
-# Readme
+# Web Mapping Essentials
 
 Welcome to the Resources Library of GeoAdaptive!
 
@@ -27,7 +27,7 @@ Now download the free-to-use coding interface Atom <a href = https://atom.io/>he
 extended reading
 <a href = http://people.apache.org/~acmurthy/WhyIsProgrammingFun.html>What's the fun of programming?</a>
 
-### Web Mapping Fundamentals
+### Online Courses
 <br>
 Here are some good resources of online tutorial courses good to start with. Shouldn't take more than a day to complete for each. 
 
@@ -46,16 +46,20 @@ In total, these courses shouldn't take more than three full days to complete. Bu
 
 #### Social-economic Profile of Paraguay Departments
 This is a step-by-step walking through example for, starting with a GIS shapefile, to a simple online webmap-application
-The map application you are going to build looks like <a href = >this. </a> 
+The map application you are going to build looks like <a href = https://rawgit.com/GeoAdaptive/Resources_library/master/Example_Paraguay/index.html>this. </a> 
+
+#### Step 0
+Convert your shapefile from shp to the geoJSON format. You should be able to do this is ArcMap with the JSON conversion tool. By the end, you should get something like <a href = https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/data/Paraguay_Department.json>this.</a>
+
 
 #### Step 1
-First, fork this Resources_library repository to your own Github repo.
+First, fork this Resources_library repository to your own Github repo. Check to make sure you have the css, js, data, fonts folders and the index.html file. Let me know if you have problems.
 
 #### Step 2
 Then open your Atom interface
 
 #### Step 3
-Open the HTML, CSS files
+Open the HTML(the index.html), CSS(the css file in the css folder) files
 
 ##### HTML:
 <br> Here looks at the file, these part of the code sets up a web page using HTML
@@ -133,7 +137,7 @@ Now, the HTML file is set up. Let's look at the CSS file.
 
 
 ### Step 4
-Now open the js.js
+Now open the js.js in the js folder
 ```Javascript
 ///This is a 3-STEP process
 /// 1. Setting up the Basemap
@@ -189,6 +193,9 @@ $(document).ready(function(){
 #### Step 4
 
 Source code are here:
+<a href= https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/index.html>HTML</a>
+<a href= https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/css/style.css >CSS</a>
+<a href= https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/js/js.js>JS</a>
 
 Now, make some changes to adjust the website to your preference.
 
