@@ -19,8 +19,10 @@ Java is usually learned the same time with Python, but it's a more formal langua
 
 3. PHP and Javascript
 Both PHP and javascript are object-oriented languages that controls the web application. Their difference is that PHP is a server-side language, focusing on devising fucntionalities of the applicatio locally, while javascript is a client-side language that interacts with the visitor to the website. Together Python and javascript can build up dynamic and powerful web applications.
-<a href = https://www.w3schools.com/php>PHP</a>
-<a href = https://www.codecademy.com/learn/introduction-to-javascript>javascript</a>
+<ul>
+  <li><a href = https://www.w3schools.com/php>PHP</a>
+  <li><a href = https://www.codecademy.com/learn/introduction-to-javascript>javascript</a>
+</ul>
 
 4. MySQL
 The most common language for building the relational database on a server.
