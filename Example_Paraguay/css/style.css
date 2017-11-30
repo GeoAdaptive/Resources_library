@@ -1,3 +1,5 @@
+/*This '#' calls the id of the HTML element you wanna control style for*/
+/*full details of CSS properties is here.*/
 #title {
   position:relative;
   left:2%;
