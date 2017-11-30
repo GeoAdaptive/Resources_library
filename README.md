@@ -29,7 +29,7 @@ extended reading
 
 ### Web Mapping Fundamentals
 <br>
-Here are some good resources of online tutorial courses good to start with.
+Here are some good resources of online tutorial courses good to start with. Shouldn't take more than a day to complete for each. 
 
 <ul>
 <li> HTML & CSS </li> 
@@ -39,7 +39,8 @@ This is the framework for most of the websites nowadays, the front-end design la
 This is one of the most popular tools to link back-end operations with front-end reactions, the instrument of web-apps
 <a href = https://www.codecademy.com/learn/introduction-to-javascript> here </a>
 </ul>
-In total, these courses shouldn't take more than three full days to complete
+In total, these courses shouldn't take more than three full days to complete. But now, just go to the example below and I'll walk you through an example.
+
 
 ### Putting up a Web-map
 
