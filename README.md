@@ -98,13 +98,13 @@ Also the jQuery document for downloading and cleaning your converted geojson fil
       crossorigin="anonymous"></script>
 
 ```
-Here the web content starts. First we set up the map by creating a HTML <div> element for the map. We design it as full screen wide (100%) and takes 84% of the height of the screen.
+Here the web content starts. First we set up the map by creating a HTML \<div>\ element for the map. We design it as full screen wide (100%) and takes 84% of the height of the screen.
 ```
 <!--The mapping portal here starts from the top edge of your screen, takes the full width 100%, the height 84%-->
     <div id="map" style="top:0; width:100%; height:84%; z-index:20;"></div>
     <!--We can add the title of your webmap here-->
 ```
-Now use this second <div> to name your web application
+Now use this second \<div>\ to name your web application
 
 ``` 
     <div>
@@ -117,13 +117,71 @@ Don't forget to call for the javascript file that controls the back-end operatio
   <script src="js/js.js"></script>
 ```
 <br>
+Now, the HTML file is set up. Let's look at the CSS file.
+
+```CSS
+/*This '#' calls the id of the HTML element you wanna control style for*/
+#title {
+  position:relative;
+  left:2%;
+  top:3%;
+  font-size:24px;
+  font-family:Roboto;
+}
+```
 
 
 ### Step 4
-Now open the index.html
+Now open the js.js
 ```Javascript
-// add basemap.
-L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+///This is a 3-STEP process
+/// 1. Setting up the Basemap
+// here this function sets up the name (to match the id of the map div element in the HTML), the center with coordinates(latitude, longitude), and the zoom level(larger level, more zoom-in) for the map.
+var map = L.map('map', {
+  center: [-23.817, -55.731],
+  zoom: 6.5
+});
+
+// here we set up the basemap style
+// we can also set it as var Style = 'dark';
+// other styles are also available to choose from
+// here maybe: http://leaflet-extras.github.io/leaflet-providers/preview/
+var Style = 'light';
+
+// this code constructs the map object
+L.tileLayer('http://{s}.basemaps.cartocdn.com/'+ Style + '_all/{z}/{x}/{y}@2x.png', {
+  maxZoom: 18,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
+  subdomains: 'abcd'
+}).addTo(map);
+
+
+///2. Adding the markers
+// now add the marker here, with a popup text explaining the marker
+L.marker([-25.262, -57.581]).addTo(map)
+    .bindPopup('Asuncion, Paraguay')
+    .addTo(map);
+
+///3. Adding the layer data to be mapped
+// calling the data to be mapped, that is in this case, stored within the Github repo data folder
+var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK7cMaK3qDRhxjeQ47_XUpK3jfPppks5aKXmowA%3D%3D";
+
+//use this function to download and create mappable objects
+$(document).ready(function(){
+  $.ajax(Paraguay_Department).done(function(data){
+    var parsedData = JSON.parse(data);
+    var LayerMappedPolygon = L.geoJSON(parsedData,
+      {
+        style: {opacity:1,width:0.5,color:'#85C1E9'},
+        pointToLayer: function (feature, latlng) {
+        return new L.Polygon(latlng, {
+        });
+      },
+    }).bindPopup('I\'m in Paraguay!')
+    .addTo(map);
+  })
+})
+
 ```
 
 
