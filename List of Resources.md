@@ -1,7 +1,10 @@
 # List of resources online
 ## Data analytics
-1. data science basics (concepts, maths, and statistics) <a href = https://www.coursera.org/specializations/jhu-data-science> here. </a> A good well-known resource on data science was from <a href = http://www.biostat.jhsph.edu/~rpeng/> this guy. </a>
-2. R and data analytics & visualization <a href = https://www.r-bloggers.com/> here. </a> This is a up-to-date website for news and new plugins created for R packages, many cool data visualization packages too. Machine learning, AI, etc...
+1. data science basics (concepts, maths, and statistics) <a href = https://www.coursera.org/specializations/jhu-data-science> here. </a><br> A good well-known online resource on data science and statistics is from <a href = http://www.biostat.jhsph.edu/~rpeng/> this guy. </a>
+2. R and data analytics & visualization <a href = https://www.r-bloggers.com/> here. </a> 
+<br>This is a up-to-date website for news and new plugins created for R packages, many cool data visualization packages too. Machine learning, AI, etc...
+3. Data visualization
+<br> The <a href = https://d3js.org/>d3.js</a> library is quite powerful in hosting data visualization applications such as the OEC, DataViva, and others.
 
 ## Web mapping
 The links below are free online course websites offering tutorial courses and lessons, many of which have classes on webmapping too.
