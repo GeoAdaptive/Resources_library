@@ -1,4 +1,4 @@
-# RESOURCES
+# Readme
 
 Welcome to the Resources Library of GeoAdaptive!
 
@@ -45,6 +45,7 @@ In total, these courses shouldn't take more than three full days to complete
 ### Putting up a Web-map
 #### Social-economic Profile of Paraguay Departments
 This is a step-by-step walking through example for, starting with a GIS shapefile, to a simple online webmap-application
+The map application you are going to build looks like <a href = >this. </a> 
 
 #### Step 1
 First, fork this Resources_library repository to your own Github repo.
