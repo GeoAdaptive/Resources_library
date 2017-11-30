@@ -46,7 +46,7 @@ In total, these courses shouldn't take more than three full days to complete. Bu
 
 #### Social-economic Profile of Paraguay Departments
 This is a step-by-step walking through example for, starting with a GIS shapefile, to a simple online webmap-application
-The map application you are going to build looks like <a href = >this. </a> 
+The map application you are going to build looks like <a href = https://rawgit.com/GeoAdaptive/Resources_library/master/Example_Paraguay/index.html>this. </a> 
 
 #### Step 1
 First, fork this Resources_library repository to your own Github repo.
