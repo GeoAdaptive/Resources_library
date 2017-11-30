@@ -18,7 +18,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/'+ Style + '_all/{z}/{x}/{y}@2x.pn
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
   subdomains: 'abcd'
 }).addTo(map);
-
+console.log("mapped");
 
 ///2. Adding the markers
 // now add the marker here, with a popup text explaining the marker
@@ -28,7 +28,7 @@ L.marker([-25.262, -57.581]).addTo(map)
 
 ///3. Adding the layer data to be mapped
 // calling the data to be mapped, that is in this case, stored within the Github repo data folder
-var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK7cMaK3qDRhxjeQ47_XUpK3jfPppks5aKXmowA%3D%3D";
+var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK_iClU3Bq4w13Xt-gKc1xP9YEfbUks5aKafawA%3D%3D";
 
 //use this function to download and create mappable objects
 $(document).ready(function(){
