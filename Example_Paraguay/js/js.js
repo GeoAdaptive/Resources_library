@@ -28,7 +28,7 @@ L.marker([-25.262, -57.581]).addTo(map)
 
 ///3. Adding the layer data to be mapped
 // calling the data to be mapped, that is in this case, stored within the Github repo data folder
-var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK_iClU3Bq4w13Xt-gKc1xP9YEfbUks5aKafawA%3D%3D";
+var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQKxkl9vgqynf9NXIDKrvQTA6BUk0Dks5aNCL7wA%3D%3D";
 
 //use this function to download and create mappable objects
 $(document).ready(function(){
