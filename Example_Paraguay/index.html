@@ -22,37 +22,6 @@
         crossorigin="anonymous"></script>
 
 
-    <!-- Here below is for the styling of the HTML element -->
-    <style>
-    #title {
-      position:absolute;
-      left:2%;
-      bottom:10%;
-      font-size:24px;
-      font-family:Roboto;
-      z-index: 40;
-    }
-
-    #description {
-      position:absolute;
-      width:30%;
-      left:2%;
-      bottom:3%;
-      font-size:14px;
-      font-family:Roboto;
-      z-index: 40;
-    }
-
-    #logo {
-      position:absolute;
-      width:10%;
-      right:2%;
-      bottom:2%;
-      z-index: 40;
-    }
-    </style>
-
-
     <!--Below starts the content of the webpage-->
     <!--The mapping portal here starts from the top edge of your screen, takes the full width 100%, the height 84%-->
     <div id="map" style="position: absolute; width:100%; height:84%; z-index:20;"></div>
@@ -62,58 +31,9 @@
       <p id = "description"> This is a map visualizing the social-economic condition of Paraguay through a series indicators developed by GeoAdaptive's analytics team. </p>
     </div>
     <img id = "logo" src="https://preview.ibb.co/i2z8FQ/logo.png">
-    <!-- <img id = "logo1" src="https://imgur.com/83aY4so"> -->
-
-
 
     <!--usually put the request for javascript files here, it controls the operations of the application-->
-    <script>
-    ///This is a 3-STEP process
-    /// 1. Setting up the Basemap
-    // here this function sets up the name (to match the id of the map div element in the HTML), the center with coordinates(latitude, longitude), and the zoom level(larger level, more zoom-in) for the map.
-    var map = L.map('map', {
-      center: [-23.817, -55.731],
-      zoom: 6.5
-    });
-
-    // here we set up the basemap style
-    var Style = 'light';
-
-    // this code constructs the map object
-    L.tileLayer('http://{s}.basemaps.cartocdn.com/'+ Style + '_all/{z}/{x}/{y}@2x.png', {
-      maxZoom: 18,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
-      subdomains: 'abcd'
-    }).addTo(map);
-    console.log("mapped");
-
-    ///2. Adding the markers
-    // now add the marker here, with a popup text explaining the marker
-    L.marker([-25.262, -57.581]).addTo(map)
-        .bindPopup('Asuncion, Paraguay')
-        .addTo(map);
-
-    ///3. Adding the layer data to be mapped
-    // calling the data to be mapped, that is in this case, stored within the Github repo data folder
-    // when you have new data, just put the geojson to the "data" folder and commit to your Github repo
-    var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/ADM_PRY_DEP.geojson?token=AgSQK2E68ldQRZyJTVEkUhY-YQb960hYks5aNCaMwA%3D%3D";
-
-    //use this function to download and create mappable objects
-    $(document).ready(function(){
-      $.ajax(Paraguay_Department).done(function(data){
-        var parsedData = JSON.parse(data);
-        var LayerMappedPolygon = L.geoJSON(parsedData,
-          {
-            style: {opacity:1,width:0.5,color:'#85C1E9'},
-            pointToLayer: function (feature, latlng) {
-            return new L.Polygon(latlng, {
-            });
-          },
-        }).bindPopup('I\'m in Paraguay!')
-        .addTo(map);
-      })
-    })
-
+    <script src = "js/js.js">
     </script>
   </body>
   <!--the application ends-->
