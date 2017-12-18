@@ -206,11 +206,13 @@ Cheers,
 
 <br>
 <br>
+
 ###Tutorial 02
 
-```
+
 //4. Tutorial 02: Details of mapping Points, Lines and Polygons
 //4.1 Mapping Multiple Points
+```
 var PointsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/INFR_middleschool_Paraguay.geojson";
 $(document).ready(function(){
   //this ajax() function does the download, or obtain data from the API.
@@ -233,8 +235,10 @@ $(document).ready(function(){
     .addTo(map);
   });
 });
+```
 
 //4.2 Mapping Lines
+```
 var LinesUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/primaryroads.geojson";
 $(document).ready(function(){
   $.ajax(LinesUrl).done(function(data){
@@ -250,8 +254,10 @@ $(document).ready(function(){
     .addTo(map);
   });
 });
+```
 
 //4.3 Mapping Polygons
+```
 var PolygonsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/ADM_PRY_DEP.geojson";
 $(document).ready(function(){
   $.ajax(PolygonsUrl).done(function(data){
