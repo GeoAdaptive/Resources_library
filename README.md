@@ -29,11 +29,11 @@ extended reading
 
 ### Online Courses
 <br>
-Here are some good resources of online tutorial courses good to start with. Shouldn't take more than a day to complete for each. 
+Here are some good resources of online tutorial courses good to start with. Shouldn't take more than a day to complete for each.
 
 <ul>
-<li> HTML & CSS </li> 
-This is the framework for most of the websites nowadays, the front-end design language 
+<li> HTML & CSS </li>
+This is the framework for most of the websites nowadays, the front-end design language
 <a href = https://www.codecademy.com/en/tracks/web> here </a>
 <li> javascript </li>
 This is one of the most popular tools to link back-end operations with front-end reactions, the instrument of web-apps
@@ -46,7 +46,7 @@ In total, these courses shouldn't take more than three full days to complete. Bu
 
 #### Social-economic Profile of Paraguay Departments
 This is a step-by-step walking through example for, starting with a GIS shapefile, to a simple online webmap-application
-The map application you are going to build looks like <a href = https://rawgit.com/GeoAdaptive/Resources_library/master/Example_Paraguay/index.html>this. </a> 
+The map application you are going to build looks like <a href = https://rawgit.com/GeoAdaptive/Resources_library/master/Example_Paraguay/index.html>this. </a>
 
 #### Step 0
 Convert your shapefile from shp to the geoJSON format. You should be able to do this is ArcMap with the JSON conversion tool. By the end, you should get something like <a href = https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/data/Paraguay_Department.json>this.</a>
@@ -111,7 +111,7 @@ Here the web content starts. First we set up the map by creating a HTML \<div>\ 
 ```
 Now use this second \<div>\ to name your web application
 
-``` 
+```
     <div>
       <h2 id = "title"> Change your title here</h2>
     </div>
@@ -124,7 +124,7 @@ Don't forget to call for the javascript file that controls the back-end operatio
 <br>
 Now, the HTML file is set up. Let's look at the CSS file.
 
-```CSS
+``CSS
 /*This '#' calls the id of the HTML element you wanna control style for*/
 #title {
   position:relative;
@@ -138,7 +138,8 @@ Now, the HTML file is set up. Let's look at the CSS file.
 
 ### Step 4
 Now open the js.js in the js folder
-```Javascript
+
+``Javascript
 ///This is a 3-STEP process
 /// 1. Setting up the Basemap
 // here this function sets up the name (to match the id of the map div element in the HTML), the center with coordinates(latitude, longitude), and the zoom level(larger level, more zoom-in) for the map.
@@ -203,3 +204,65 @@ Bravo! Good job! You've known how to set-up the web-map from desktop GIS files!
 
 Cheers,
 
+
+#Tutorial 02
+```
+//4. Tutorial 02: Details of mapping Points, Lines and Polygons
+//4.1 Mapping Multiple Points
+var PointsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/INFR_middleschool_Paraguay.geojson";
+$(document).ready(function(){
+  //this ajax() function does the download, or obtain data from the API.
+  $.ajax(PointsUrl).done(function(data){
+    //data needs to be parsed or cleaned for use.
+    var parsedData = JSON.parse(data);
+    //create geojson objects using the parsed or cleaned data.
+    var MappedObjects = L.geoJSON(parsedData,
+      {
+        //define the style of the objects.
+        style: {opacity:1,radius:1,width:0.5,color:'#85C1E9'},
+        //this function runs through all the features in the parsed dataset and create circle markers.
+        pointToLayer: function (feature, latlng) {
+        return new L.circleMarker(latlng, {
+        });
+      },
+    //append the text to the marker.
+    }).bindPopup('I\'m a point!')
+    //add the mapped objects to the map.
+    .addTo(map);
+  });
+});
+
+//4.2 Mapping Lines
+var LinesUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/primaryroads.geojson";
+$(document).ready(function(){
+  $.ajax(LinesUrl).done(function(data){
+    var parsedData = JSON.parse(data);
+    var MappedObjects = L.geoJSON(parsedData,
+      {
+        style: {opacity:1,width:0.5,color:'#D35400'},
+        pointToLayer: function (feature, latlng) {
+        return new L.Polyline(latlng, {
+        });
+      },
+    }).bindPopup('I\'m a polyline!')
+    .addTo(map);
+  });
+});
+
+//4.3 Mapping Polygons
+var PolygonsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/ADM_PRY_DEP.geojson";
+$(document).ready(function(){
+  $.ajax(PolygonsUrl).done(function(data){
+    var parsedData = JSON.parse(data);
+    var MappedObjects = L.geoJSON(parsedData,
+      {
+        style: {opacity:1,width:0.5,color:'#F9E79F'},
+        pointToLayer: function (feature, latlng) {
+        return new L.Polygon(latlng, {
+        });
+      },
+    }).bindPopup('I\'m a polygon!')
+    .addTo(map);
+  });
+});
+```
