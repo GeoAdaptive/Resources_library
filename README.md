@@ -204,8 +204,10 @@ Bravo! Good job! You've known how to set-up the web-map from desktop GIS files!
 
 Cheers,
 
-
+<br>
+<br>
 ###Tutorial 02
+
 ```
 //4. Tutorial 02: Details of mapping Points, Lines and Polygons
 //4.1 Mapping Multiple Points
