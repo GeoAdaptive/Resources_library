@@ -135,8 +135,8 @@ Now, the HTML file is set up. Let's look at the CSS file.
 }
 ```
 
-
-### Step 4
+```
+#### Step 4
 Now open the js.js in the js folder
 
 ``Javascript
@@ -189,9 +189,9 @@ $(document).ready(function(){
 })
 
 ```
+```
 
-
-#### Step 4
+#### Step 5
 
 Source code are here:
 <a href= https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/index.html>HTML</a>
@@ -207,11 +207,10 @@ Cheers,
 <br>
 <br>
 
-###Tutorial 02
+##Tutorial 02
 
-
-//4. Tutorial 02: Details of mapping Points, Lines and Polygons
-//4.1 Mapping Multiple Points
+##4. Tutorial 02: Details of mapping Points, Lines and Polygons
+###4.1 Mapping Multiple Points
 ```
 var PointsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/INFR_middleschool_Paraguay.geojson";
 $(document).ready(function(){
@@ -237,7 +236,7 @@ $(document).ready(function(){
 });
 ```
 
-//4.2 Mapping Lines
+###4.2 Mapping Lines
 ```
 var LinesUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/primaryroads.geojson";
 $(document).ready(function(){
@@ -256,7 +255,7 @@ $(document).ready(function(){
 });
 ```
 
-//4.3 Mapping Polygons
+###4.3 Mapping Polygons
 ```
 var PolygonsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/ADM_PRY_DEP.geojson";
 $(document).ready(function(){
