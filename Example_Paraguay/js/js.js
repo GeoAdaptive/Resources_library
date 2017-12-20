@@ -55,7 +55,7 @@ $(document).ready(function(){
   $.ajax(PointsUrl).done(function(data){
 
   });
-};
+});
 
 
 //4.2 Mapping Lines
@@ -64,7 +64,7 @@ $(document).ready(function(){
   $.ajax(LinesUrl).done(function(data){
 
   });
-};
+});
 
 //4.3 Mapping Polygons
 var PolygonsUrl = "";
@@ -72,4 +72,4 @@ $(document).ready(function(){
   $.ajax(PolygonsUrl).done(function(data){
 
   });
-};
+});
