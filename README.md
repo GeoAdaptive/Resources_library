@@ -49,8 +49,7 @@ This is a step-by-step walking through example for, starting with a GIS shapefil
 The map application you are going to build looks like <a href = https://rawgit.com/GeoAdaptive/Resources_library/master/Example_Paraguay/index.html>this. </a>
 
 #### Step 0
-Convert your shapefile from shp to the geoJSON format. You should be able to do this is ArcMap with the JSON conversion tool. By the end, you should get something like <a href = https://github.com/GeoAdaptive/Resources_library/blob/master/Example_Paraguay/data/Paraguay_Department.json>this.</a>
-
+Convert your shapefile from shp to the geoJSON format. You should be able to do this is ArcMap with the JSON conversion tool. By the end, you should get something like a map with projected geojson.
 
 #### Step 1
 First, fork this Resources_library repository to your own Github repo. Check to make sure you have the css, js, data folders and the index.html file. Let me know if you have problems.
@@ -139,40 +138,50 @@ Now, the HTML file is set up. Let's look at the CSS file.
 #### Step 4
 Now open the js.js in the js folder
 
-``Javascript
+Javascript
 ///This is a 3-STEP process
 /// 1. Setting up the Basemap
 // here this function sets up the name (to match the id of the map div element in the HTML), the center with coordinates(latitude, longitude), and the zoom level(larger level, more zoom-in) for the map.
+```
 var map = L.map('map', {
   center: [-23.817, -55.731],
   zoom: 6.5
 });
+```
 
 // here we set up the basemap style
 // we can also set it as var Style = 'dark';
 // other styles are also available to choose from
 // here maybe: http://leaflet-extras.github.io/leaflet-providers/preview/
+```
 var Style = 'light';
+```
 
 // this code constructs the map object
+```
 L.tileLayer('http://{s}.basemaps.cartocdn.com/'+ Style + '_all/{z}/{x}/{y}@2x.png', {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
   subdomains: 'abcd'
 }).addTo(map);
-
+```
 
 ///2. Adding the markers
 // now add the marker here, with a popup text explaining the marker
+
+```
 L.marker([-25.262, -57.581]).addTo(map)
     .bindPopup('Asuncion, Paraguay')
     .addTo(map);
+```
 
 ///3. Adding the layer data to be mapped
 // calling the data to be mapped, that is in this case, stored within the Github repo data folder
+```
 var Paraguay_Department = "https://raw.githubusercontent.com/GeoAdaptive/Resources_library/master/Example_Paraguay/data/Paraguay_Department.json?token=AgSQK7cMaK3qDRhxjeQ47_XUpK3jfPppks5aKXmowA%3D%3D";
-
+```
 //use this function to download and create mappable objects
+```
 $(document).ready(function(){
   $.ajax(Paraguay_Department).done(function(data){
     var parsedData = JSON.parse(data);
@@ -188,7 +197,6 @@ $(document).ready(function(){
   })
 })
 
-```
 ```
 
 #### Step 5
@@ -210,6 +218,7 @@ Cheers,
 ##Tutorial 02
 
 ##4. Tutorial 02: Details of mapping Points, Lines and Polygons
+<br>
 ###4.1 Mapping Multiple Points
 ```
 var PointsUrl = "https://raw.githubusercontent.com/GeoAdaptive/Tutorial_02/master/data/INFR_middleschool_Paraguay.geojson";
